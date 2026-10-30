@@ -1,0 +1,265 @@
+/* Reveal.js theme inspired by the supplied CZU PEF lecture slides. */
+:root {
+    --czu-red: #d00000;
+    --czu-green: #287e35;
+    --czu-gray: #a8a8a8;
+    --czu-ink: #161616;
+}
+
+.reveal {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--czu-ink);
+    font-size: 29px;
+}
+
+.reveal .slides section {
+    box-sizing: border-box;
+    text-align: left;
+    background: #fff;
+    padding: 0 52px 38px;
+    height: 100%;
+    overflow: hidden;
+}
+
+.reveal .slides section:not(.photo-slide):not(.cover)::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url('assets/image11.png') no-repeat 92% 69%;
+    background-size: 175px auto;
+    opacity: .075;
+    pointer-events: none;
+}
+
+.reveal .slides section:not(.photo-slide):not(.cover)::after {
+    content: "Česká zemědělská univerzita v Praze";
+    position: absolute;
+    bottom: 15px;
+    left: 52px;
+    font-size: 12px;
+    color: #b5b5b5;
+}
+
+.reveal .slides section h1,
+.reveal .slides section h2.slide-title {
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1;
+    margin: 0 -52px 28px;
+    padding: 21px 52px 19px;
+    background: var(--czu-red);
+    color: white;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1.2;
+    text-transform: none;
+    letter-spacing: 0;
+    box-shadow: none;
+}
+
+.reveal .slides section h2,
+.reveal .slides section h3 {
+    text-transform: none;
+    letter-spacing: 0;
+    color: inherit;
+    font-weight: 700;
+}
+
+.reveal .slides section h3 {
+    font-size: 29px;
+    margin: 12px 0;
+}
+
+.reveal .slides section p,
+.reveal .slides section li {
+    line-height: 1.35;
+}
+
+.reveal .slides section ul {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.reveal .slides section li {
+    position: relative;
+    padding-left: 24px;
+    margin: 9px 0;
+}
+
+.reveal .slides section li::before {
+    content: '▪';
+    position: absolute;
+    left: 0;
+    color: var(--czu-green);
+    font-size: 24px;
+    top: 0;
+}
+
+.reveal .slides section li ul {
+    margin: 6px 0 0 12px;
+    font-size: .88em;
+}
+
+.reveal .slides section strong {
+    font-weight: 700;
+}
+
+.reveal .slides section .columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 45px;
+}
+
+.reveal .slides section .columns.three {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.reveal .slides section .columns>div {
+    min-width: 0;
+}
+
+.reveal .slides section .faculty-footer {
+    position: absolute;
+    bottom: 15px;
+    right: 52px;
+    color: var(--czu-red);
+    font-size: 13px;
+    font-weight: 700;
+    z-index: 2;
+}
+
+.reveal .slides section .faculty-site {
+    position: absolute;
+    right: 52px;
+    top: 12px;
+    font-size: 14px;
+    color: #999;
+    z-index: 2;
+}
+
+.reveal .slide-number {
+    bottom: auto;
+    top: 33px;
+    right: 33px;
+    color: white;
+    background: transparent;
+    font-size: 21px;
+    font-weight: bold;
+    z-index: 30;
+}
+
+.reveal .slides section.cover {
+    background: #fff url('assets/image3.jpg') center top / 100% 79% no-repeat;
+    color: #fff;
+    padding: 0;
+}
+
+.reveal .slides section.cover::after {
+    display: none;
+}
+
+.reveal .slides section.cover .cover-heading {
+    position: absolute;
+    top: 28%;
+    left: 7%;
+    right: 5%;
+    font-size: 45px;
+    font-weight: bold;
+    line-height: 1.15;
+    text-shadow: 0 2px 5px #0005;
+}
+
+.reveal .slides section.cover .cover-byline {
+    position: absolute;
+    top: 67%;
+    left: 7%;
+    font-size: 18px;
+}
+
+.reveal .slides section.cover .cover-band {
+    position: absolute;
+    bottom: 5%;
+    height: 14%;
+    width: 100%;
+    background: var(--czu-red);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+    box-sizing: border-box;
+}
+
+.reveal .slides section.cover .cover-band img {
+    height: 58px;
+    width: auto;
+    margin: 0;
+}
+
+.reveal .slides section.photo-slide {
+    padding: 0;
+    background: url('assets/image16.jpg') center / cover no-repeat;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.reveal .slides section.photo-slide::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #0005;
+}
+
+.reveal .slides section.photo-slide h2 {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    font-size: 52px;
+}
+
+.reveal .slides section.photo-slide img {
+    position: absolute;
+    z-index: 1;
+    bottom: 12%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 260px;
+}
+
+.reveal .slides section img {
+    object-fit: contain;
+    max-height: 510px;
+}
+
+.reveal .slides section .canvas-image {
+    display: block;
+    margin: 5px auto;
+    width: 92%;
+    max-height: 510px;
+}
+
+.reveal .slides section .note {
+    color: #666;
+    font-size: .72em;
+}
+
+.reveal .slides section .highlight {
+    color: var(--czu-red);
+    font-weight: 700;
+}
+
+.reveal .progress {
+    color: var(--czu-red);
+    height: 4px;
+}
+
+@media print {
+    .reveal .slides section {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+}
